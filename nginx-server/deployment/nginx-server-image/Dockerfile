@@ -1,6 +1,6 @@
-FROM dockerhub.akscn.io/library/nginx:1.15.3
+FROM dockerhub.akscn.io/library/nginx:1.15.3-alpine
 ADD ./default.conf /etc/nginx/conf.d/default.conf
 ADD ./gitclone.sh /mnt/gitclone.sh
 ADD ./genfiles.sh /mnt/genfiles.sh
 
-RUN apt-get update && apt-get install git -y
+RUN apk add git
