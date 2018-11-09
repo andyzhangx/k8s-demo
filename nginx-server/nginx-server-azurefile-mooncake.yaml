@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: nginx-server
-        image: dockerhub.azk8s.cn/andyzhangx/nginx-server:1.0.0
+        image: dockerhub.azk8s.cn/andyzhangx/nginx-server
         imagePullPolicy: Always
         lifecycle:
           postStart:
@@ -44,7 +44,7 @@ spec:
               command:
                 - "/bin/sh"
                 - "-c"
-                - "/mnt/gitclone.sh"
+                - "/mnt/gitclone.sh https://github.com/andyzhangx/k8s-demo.git"
         ports:
         - containerPort: 80
         resources:
