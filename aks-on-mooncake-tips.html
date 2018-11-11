@@ -1,0 +1,170 @@
+<html><head><meta charset='utf-8'/><style id='basic-html-wysiwyg-editor-css'>table {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+    table td,
+    table th {
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        padding: 3px 5px;
+    }
+
+    table th {
+        border-bottom: 2px solid #ccc;
+        text-align: center;
+    }
+
+blockquote {
+    display: block;
+    border-left: 8px solid #d0e5f2;
+    padding: 5px 10px;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 100%;
+    background-color: #f1f1f1;
+}
+
+code {
+    display: inline-block;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin: 0 3px;
+}
+
+pre code {
+    display: block;
+}
+
+ul, ol {
+    margin: 10px 0 10px 20px;
+}
+</style></head><body><br>
+
+
+<ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in">
+ </ul><h2 align="center">AKS on Azure China Cloud Tips</h2><ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in"><li style="margin-top:0;margin-bottom:0;vertical-align:middle;margin-top:12pt;&#10;     margin-bottom:12pt;color:#24292E"><h3><span style="font-family:Calibri;&#10;     font-size:12.0pt;background:white">Container registry proxies in Azure
+     China Cloud</span></h3></li>
+</ul>
+
+<div>
+
+<table title="" style="direction:ltr;&#10; border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:&#10; 1pt;margin-left:.3333in" border="1" cellspacing="0" cellpadding="0" summary="" valign="top">
+ <tbody><tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:1.6888in;padding:4pt 4pt 4pt 4pt">
+  <p><span>global</span></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:2.2034in;padding:4pt 4pt 4pt 4pt">
+  <p><span>registry proxy in Azure China</span></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:5.3729in;padding:4pt 4pt 4pt 4pt">
+  <p><span>Example</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:1.7083in;padding:4pt 4pt 4pt 4pt">
+  <p>dockerhub
+  (docker.io)</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:2.184in;padding:4pt 4pt 4pt 4pt">
+  <p><a href="http://mirror.azk8s.cn/help/docker-registry-proxy-cache.html"><span>dockerhub.azk8s.cn</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:5.3729in;padding:4pt 4pt 4pt 4pt">
+  <p>dockerhub.azk8s.cn/library/centos</p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:#F6F8FA;vertical-align:top;width:1.6888in;padding:4pt 4pt 4pt 4pt">
+  <p>gcr.io</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:#F6F8FA;vertical-align:top;width:2.184in;padding:4pt 4pt 4pt 4pt">
+  <p><a href="http://mirror.azk8s.cn/help/gcr-proxy-cache.html"><span>gcr.azk8s.cn</span></a></p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:#F6F8FA;vertical-align:top;width:5.5243in;padding:4pt 4pt 4pt 4pt">
+  <p>gcr.azk8s.cn/google_containers/hyperkube-amd64:v1.9.2</p>
+  <p><span>Note</span>: </p>
+  <p>`k8s.gcr.io` would
+  redirect to `gcr.io/google-containers`, following images are identical:</p>
+  <p lang="x-none">k8s.gcr.io/pause-amd64:3.1</p>
+  <p><span lang="en-US">gcr.io</span><span lang="x-none">/google_containers/pause-amd64:3.1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:1.6888in;padding:4pt 4pt 4pt 4pt">
+  <p>quay.io</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:2.184in;padding:4pt 4pt 4pt 4pt">
+  <p>quay.azk8s.cn</p>
+  </td>
+  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;&#10;  background-color:white;vertical-align:top;width:5.3923in;padding:4pt 4pt 4pt 4pt">
+  <p>quay.azk8s.cn/deis/go-dev:v1.10.0</p>
+  </td>
+ </tr>
+</tbody></table>
+
+</div>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E">&nbsp;</p>
+
+<ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in">
+ <li><h3><span>Azure CLI
+     command on Azure China Cloud</span></h3></li>
+</ul>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az cloud set --name
+AzureChinaCloud</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az login</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az account list</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az account set -s
+&lt;subscription-name&gt;</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>&nbsp;</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az aks get-credentials
+--resource-group &lt;RG-NAME&gt; --name &lt;CLUSTER-NAME&gt;</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><i>az aks browse&nbsp; --resource-group &lt;RG-NAME&gt; --name
+&lt;CLUSTER-NAME&gt;</i></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><span>…</span></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><span>Detailed "az aks"
+command line manual could be found here: </span><a href="https://docs.microsoft.com/en-us/cli/azure/aks"><span style="background:&#10;white">https://docs.microsoft.com/en-us/cli/azure/aks</span></a></p>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E">&nbsp;</p>
+
+<ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in">
+ <li><h3><span>Install
+     kubectl on Azure China Cloud</span></h3></li>
+</ul>
+
+<p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><span>Do not use 'az aks install-cli',
+download from </span><a href="http://mirror.azk8s.cn/kubernetes/kubectl/"><span>http://mirror.azk8s.cn/kubernetes/kubectl/</span></a><span> directly</span></p><p style="margin:0in;margin-left:.375in;font-family:Calibri;font-size:12.0pt;&#10;color:#24292E"><span><br></span></p>
+
+<ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in">
+ <li style="margin-top:0;margin-bottom:0;vertical-align:middle;margin-top:12pt;&#10;     margin-bottom:12pt;color:#24292E"><h3><span style="font-family:Calibri;&#10;     font-size:12.0pt;background:white">Helm installation guide on Azure China
+     Cloud</span></h3></li>
+</ul>
+
+<p style="margin-left:.75in;margin-top:12pt;margin-bottom:12pt;font-family:&#10;Calibri;font-size:11.25pt;color:#2F2F2F"><i>wget <a href="https://mirror.azk8s.cn/kubernetes/helm/helm-v2.6.1-linux-amd64.tar.gz">https://mirror.azk8s.cn/kubernetes/helm/helm-v2.6.1-linux-amd64.tar.gz</a><br>
+tar -xvf helm-v2.6.1-linux-amd64.tar.gz<br>
+sudo mv linux-amd64/helm /usr/local/bin <br>
+helm init --tiller-image gcr.azk8s.cn/kubernetes-helm/tiller:v2.6.1
+--stable-repo-url <a href="https://mirror.azk8s.cn/kubernetes/charts/">https://mirror.azk8s.cn/kubernetes/charts/</a> </i></p>
+
+<p><cite style="margin:0in;margin-left:.75in;font-family:Calibri;font-size:&#10;9.0pt;color:#595959">From &lt;<a href="https://mirror.azk8s.cn/help/en/kubernetes.html">https://mirror.azk8s.cn/help/en/kubernetes.html</a>&gt;
+</cite></p>
+
+<ul type="disc" style="margin-left:.375in;direction:ltr;unicode-bidi:embed;&#10; margin-top:0in;margin-bottom:0in">
+ <li style="margin-top:0;margin-bottom:0;vertical-align:middle;margin-top:12pt;&#10;     margin-bottom:12pt;color:#24292E"><h3><span style="font-family:-apple-system;&#10;     font-size:12.0pt;color:#24292E;background:white">All kubernetes related
+     binaries on github could be found under&nbsp;</span><a href="https://mirror.azk8s.cn/kubernetes"><span style="font-family:-apple-system;&#10;     font-size:12.0pt;background:white">https://mirror.azk8s.cn/kubernetes</span></a><span style="font-family:-apple-system;font-size:12.0pt;color:#24292E;&#10;     background:white">, e.g. helm, charts, etc.</span></h3></li>
+</ul>
+
+
+
+
+</body></html>
