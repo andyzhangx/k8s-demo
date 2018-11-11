@@ -14,11 +14,11 @@ An kubernetes cluster with a azure file storage class(name as `azurefile`) shoul
 
 # Deploy nginx-server application on a kubernetes cluster
 ```
-https://raw.githubusercontent.com/andyzhangx/k8s-demo/master/nginx-server/nginx-server-azurefile.yaml
+kubectl apply -f https://raw.githubusercontent.com/andyzhangx/k8s-demo/master/nginx-server/nginx-server-azurefile.yaml
 ```
 > On Azure China, run with following config:
 ```
-https://raw.githubusercontent.com/andyzhangx/k8s-demo/master/nginx-server/nginx-server-azurefile-mooncake.yaml
+kubectl apply -f https://raw.githubusercontent.com/andyzhangx/k8s-demo/master/nginx-server/nginx-server-azurefile-mooncake.yaml
 ```
 
  - check deployment status
