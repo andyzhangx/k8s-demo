@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: azure-vote-back
-        image: redis
+        image: dockerhub.azk8s.cn/library/redis
         resources:
           requests:
             cpu: 100m
